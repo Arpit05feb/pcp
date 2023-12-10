@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Free Slots</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      white-space: pre-line;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Free-Slots for PCP Classes</h1>
+  <form action="/process" method="post">
+    <label for="identifier">Select CourseCode or Section:</label>
+    <select id="identifier" name="identifier" required>
+        <option>Select</option>
+        <option value="CourseCode">CourseCode</option>
+        <option value="Section">Section</option>
+    </select> <br />
+    <label for="value">Enter Value:</label>
+    <input type="text" id="value" name="value" required>
+    <br />
+    <button type="submit">Process</button>
+  </form> <br />
+  <p><%= result %></p>
+</body>
+</html>
